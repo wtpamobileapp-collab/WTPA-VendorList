@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WTPartyAt Vendor Waitlist</title>
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/7/7e/Party_icon.png" type="image/png" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #9D00FF, #ff00cc, #00fff2);
+      background-size: 400% 400%;
+      animation: pulseBackground 10s ease infinite;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    body.loaded { opacity: 1; }
+
+    @keyframes pulseBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .neon-text {
+      text-shadow: 0 0 5px #00fff2, 0 0 10px #ff00cc;
+      transition: text-shadow 0.3s;
+    }
+    .neon-input:focus {
+      box-shadow: 0 0 8px #ff00cc, 0 0 16px #00fff2;
+      border-color: #ff00cc;
+      outline: none;
+      transition: box-shadow 0.3s, border-color 0.3s;
+    }
+
+    @keyframes pulseButton {
+      0% { box-shadow: 0 0 8px #ff00cc, 0 0 16px #00fff2; }
+      50% { box-shadow: 0 0 16px #ff00cc, 0 0 32px #00fff2; }
+      100% { box-shadow: 0 0 8px #ff00cc, 0 0 16px #00fff2; }
+    }
+    .pulse-button.pulse { animation: pulseButton 1.2s infinite alternate; }
+
+    .neon-link {
+      color: #00fff2;
+      text-decoration: none;
+      transition: color 0.3s, text-shadow 0.3s;
+    }
+    .neon-link:hover {
+      color: #ff00cc;
+      text-shadow: 0 0 5px #ff00cc, 0 0 10px #00fff2;
+    }
+
+    .card-bg {
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(6px);
+    }
+  </style>
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen px-6 sm:px-8 text-center">
+  <div class="max-w-md w-full">
+    <h1 class="text-4xl sm:text-5xl font-bold mb-4 neon-text">WTPartyAT Vendor Waitlist</h1>
+    <p class="text-lg mb-4 italic font-semibold text-black bg-white/60 px-3 py-1 rounded-xl shadow-md">
+      Where vendors meet the crowd — and the crowd meets the vibe.
+    </p>
+
+    <!-- Waitlist Form -->
+    <form id="waitlist-form" class="space-y-4 card-bg p-6 rounded-2xl border border-pink-500 shadow-lg">
+      <input type="text" name="name" placeholder="Company Name" required
+        class="w-full px-4 py-2 bg-transparent border border-pink-500 rounded-xl text-white placeholder-gray-400 neon-input" />
+      <input type="email" name="email" placeholder="Company Email" required
+        class="w-full px-4 py-2 bg-transparent border border-pink-500 rounded-xl text-white placeholder-gray-400 neon-input" />
+      <input type="tel" name="phone" placeholder="Your Phone Number" required
+        class="w-full px-4 py-2 bg-transparent border border-pink-500 rounded-xl text-white placeholder-gray-400 neon-input" />
+        <input type="text" name="city" placeholder="Your City and State" required
+        class="w-full px-4 py-2 bg-transparent border border-pink-500 rounded-xl text-white placeholder-gray-400 neon-input" />
+      
+      <!-- Clickwrap Checkbox -->
+      <div class="flex items-start space-x-2 text-left text-sm">
+        <input type="checkbox" id="consent" name="consent" required class="mt-1 accent-pink-500">
+        <label for="consent" class="text-white">
+          I agree to the
+          <a href="terms-of-service.html" class="neon-link">Terms of Service</a>.
+        </label>
+      </div>
+
+
+      <button id="submit-button" type="submit"
+        class="w-full bg-gradient-to-r from-pink-500 to-teal-400 text-black font-bold py-2 rounded-xl hover:scale-105 transition-transform pulse-button">
+        Join the Waitlist
+      </button>
+    </form>
+
+    <p id="success-message" class="hidden text-green-400 mt-6 font-semibold neon-text">
+      🎉 You're on the list! We'll notify you before the party starts.
+    </p>
+
+    <footer class="mt-12 text-gray-200 text-sm">
+      <p>© 2025 WTPartyAt. MultiTalented Ventures LLC All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- === JavaScript === -->
+ <script>
+const form = document.getElementById('waitlist-form');
+const submitButton = document.getElementById('submit-button');
+const successMessage = document.getElementById('success-message');
+const consentCheckbox = document.getElementById('consent');
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyBE6BoaF5Dyjsex83EYpjAPkFi-F-o-l0eTXEE2hjfdqKmXwPH0bLMM22AZklJR8WN/exec";
+
+// --- SESSION-BASED STORAGE ---
+// We'll use both localStorage (for back navigation) and sessionStorage (for true refresh detection).
+if (!sessionStorage.getItem('activeSession')) {
+  // New session started — clear stored form data
+  localStorage.removeItem('waitlistForm');
+  sessionStorage.setItem('activeSession', 'true');
+}
+
+// --- Restore saved form state ---
+window.addEventListener('DOMContentLoaded', () => {
+  document.body.classList.add('loaded');
+  const savedData = localStorage.getItem('waitlistForm');
+  if (savedData) {
+    const data = JSON.parse(savedData);
+    Object.keys(data).forEach(key => {
+      if (form.elements[key]) form.elements[key].value = data[key];
+    });
+  }
+});
+
+// --- Save form state on input ---
+form.addEventListener('input', () => {
+  const data = {};
+  Array.from(form.elements).forEach(el => {
+    if (el.name) data[el.name] = el.value;
+  });
+  localStorage.setItem('waitlistForm', JSON.stringify(data));
+});
+
+// --- Handle form submission ---
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  if (!consentCheckbox.checked) {
+    alert("You must agree to the Privacy Policy and Terms of Service to continue.");
+    return;
+  }
+
+  submitButton.disabled = true;
+  submitButton.textContent = "Submitting...";
+  submitButton.classList.add('pulse');
+  successMessage.classList.add('hidden');
+
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(SCRIPT_URL, { method: 'POST', body: formData });
+
+    if (response.ok) {
+      successMessage.classList.remove('hidden');
+      successMessage.textContent = "🎉 You're on the list! We'll notify you when the party starts.";
+      form.reset();
+      localStorage.removeItem('waitlistForm');
+    } else {
+      const text = await response.text();
+      successMessage.classList.remove('hidden');
+      successMessage.textContent = "⚠️ Error submitting: " + text;
+    }
+  } catch (err) {
+    successMessage.classList.remove('hidden');
+    successMessage.textContent = "⚠️ Network error: " + err.message;
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = "Join the Waitlist";
+    submitButton.classList.remove('pulse');
+  }
+});
+</script>
+
+
+  <!-- Fade transitions for navigation -->
+ <script>
+window.addEventListener('DOMContentLoaded', () => {
+  document.body.classList.add('loaded');
+});
+
+// Handle smooth fade-out for internal links
+document.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', (e) => {
+    const href = link.getAttribute('href');
+    if (href && !href.startsWith('#')) {
+      e.preventDefault();
+      document.body.classList.remove('loaded');
+      // Navigate after a short fade delay
+      setTimeout(() => {
+        window.location.href = href;
+      }, 250); // slightly faster fade for snappier feel
+    }
+  });
+});
+
+// Instantly show content when user navigates back
+window.addEventListener('pageshow', (event) => {
+  if (event.persisted) {
+    // Page loaded from cache (like a back button)
+    document.body.classList.add('loaded');
+  }
+});
+
+// Fallback for some browsers (Safari/iOS)
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible') {
+    document.body.classList.add('loaded');
+  }
+});
+</script>
+
+ 
+
+</body>
+</html>
+
+
+
+
+
+
+
