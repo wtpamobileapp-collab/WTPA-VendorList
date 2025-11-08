@@ -32,14 +32,20 @@
     </p>
   </div>
 
+
+
   <!-- App Preview -->
   <div style="margin-top:40px;">
     <h2 style="color:#ff66cc; font-size:24px; text-shadow:0 0 8px #ff00ff;">App Preview</h2>
     <table align="center" cellspacing="10">
-     
+
+<tr>
+        <td><img src="https://wtpamobileapp-collab.github.io/WTPA-VendorList/images/IMG_1515.jpeg" width="240" style="border-radius:10px; box-shadow:0 0 12px #ff00ff;"></td>
+        <td><img src="https://wtpamobileapp-collab.github.io/WTPA-VendorList/images/IMG_1637.jpeg" width="240" style="border-radius:10px; box-shadow:0 0 12px #00ffff;"></td>
+      </tr>
       <tr>
         <p style="color:#ccc; font-size:16px;">
-You can also view our full vendor packet here:  
+
 <a href="https://wtpamobileapp-collab.github.io/WTPA-VendorList/files/Postcard1.pdf"
    style="color:#00ffff; text-decoration:underline;">
    Download Vendor Packet (PDF)
