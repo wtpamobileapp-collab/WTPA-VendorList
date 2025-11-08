@@ -34,21 +34,27 @@
 
 
 
-  <!-- App Preview -->
-  <div style="margin-top:40px;">
-    <h2 style="color:#ff66cc; font-size:24px; text-shadow:0 0 8px #ff00ff;">App Preview</h2>
-    <table align="center" cellspacing="10">
-
-<tr>
-        <td><img src="https://wtpamobileapp-collab.github.io/WTPA-VendorList/images/IMG_3503 3.jpeg" width="240" style="border-radius:10px; box-shadow:0 0 12px #ff00ff;"></td>
-      </tr>
-      <tr>
-
-<a href="https://wtpamobileapp-collab.github.io/WTPA-VendorList/files/Postcard1.pdf"
-   </a>
-      </tr>
-    </table>
-  </div>
+ <!-- App Preview -->
+<div style="margin-top:40px;">
+  <h2 style="color:#ff66cc; font-size:24px; text-shadow:0 0 8px #ff00ff;">App Preview</h2>
+  <table align="center" cellspacing="10">
+    <tr>
+      <td>
+        <img src="https://wtpamobileapp-collab.github.io/WTPA-VendorList/images/IMG_3503-3.jpeg" width="240" style="border-radius:10px; box-shadow:0 0 12px #ff00ff;">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://wtpamobileapp-collab.github.io/WTPA-VendorList/files/Postcard1.pdf" 
+           style="display:inline-block; color:#fff; background:linear-gradient(90deg,#00ffff,#ff00ff);
+           padding:10px 20px; border-radius:25px; text-decoration:none; font-weight:bold;
+           box-shadow:0 0 10px #ff00ff, 0 0 20px #00ffff;">
+           📄 VIEW POSTCARD PDF
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
 
 
   <!-- Vendor Gallery -->
