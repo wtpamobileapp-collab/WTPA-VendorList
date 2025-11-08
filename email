@@ -43,6 +43,7 @@
         <img src="https://wtpamobileapp-collab.github.io/WTPA-VendorList/images/IMG_3503-3.jpeg" width="240" style="border-radius:10px; box-shadow:0 0 12px #ff00ff;">
       </td>
     </tr>
+
     <tr>
       <td>
       <img src="https://wtpamobileapp-collab.github.io/WTPA-VendorList/images/PostCard.png" 
@@ -66,9 +67,10 @@
         <td><img src="https://wtpamobileapp-collab.github.io/WTPA-VendorList/images/IMG_8064.jpeg" width="240" style="border-radius:10px; box-shadow:0 0 12px #ff00ff;"></td>         
        
       </tr>
+      <tr>
         <td><img src="https://wtpamobileapp-collab.github.io/WTPA-VendorList/images/IMG_1512.jpeg" width="240" style="border-radius:10px; box-shadow:0 0 12px #ff00ff;"></td>
         <td><img src="https://wtpamobileapp-collab.github.io/WTPA-VendorList/images/IMG_1527.jpeg" width="240" style="border-radius:10px; box-shadow:0 0 12px #00ffff;"></td>
-      <tr>
+      
       </tr>
       <tr>
         <td><img src="https://wtpamobileapp-collab.github.io/WTPA-VendorList/images/IMG_1635.jpeg" width="240" style="border-radius:10px; box-shadow:0 0 12px #ff00ff;"></td>
