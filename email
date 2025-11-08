@@ -3,9 +3,9 @@
   <p style="color:#00ffff; font-size:18px;">Connecting Bars, DJs & Nightlife Vendors Across the Gulf Coast</p>
 
   <div style="margin:35px auto; max-width:600px; background:#111; border-radius:14px; padding:25px; box-shadow:0 0 30px #ff00ff;">
-    <p style="font-size:16px;">HI {CompanyName},</p>
+    <p style="font-size:16px;">HI {Company},</p>
     <p style="color:#eee; line-height:1.6;">
-      Get your venue <strong>{CompanyName}</strong> seen by more nightlife lovers!  
+      Get your venue <strong>{Company}</strong> seen by more nightlife lovers!  
       <br>WTPA is the new mobile app connecting people to nightlife events and vendors in 
       <span style="color:#ff66cc;">Mississippi, New Orleans, and Texas</span>.
     </p>
