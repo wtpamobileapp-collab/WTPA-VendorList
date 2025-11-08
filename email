@@ -45,11 +45,8 @@
     </tr>
     <tr>
       <td>
-        <a href="https://wtpamobileapp-collab.github.io/WTPA-VendorList/files/Postcard1.pdf" 
-           style="display:inline-block; color:#fff; background:linear-gradient(90deg,#00ffff,#ff00ff);
-           padding:10px 20px; border-radius:25px; text-decoration:none; font-weight:bold;
-           box-shadow:0 0 10px #ff00ff, 0 0 20px #00ffff;">
-           📄 VIEW POSTCARD PDF
+       <img src="https://wtpamobileapp-collab.github.io/WTPA-VendorList/images/ Screenshot 2025-11-07 234135.png" width="240" style="border-radius:10px; box-shadow:0 0 12px #ff00ff;">
+    
         </a>
       </td>
     </tr>
