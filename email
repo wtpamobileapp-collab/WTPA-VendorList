@@ -1,0 +1,55 @@
+<div style="background-color:#000; color:#fff; font-family:Arial,Helvetica,sans-serif; text-align:center; padding:40px;">
+  <h1 style="color:#ff00ff; font-size:36px; letter-spacing:1px; text-shadow:0 0 15px #ff00ff;">WHERE THE PARTY AT 🎉</h1>
+  <p style="color:#00ffff; font-size:18px;">Connecting Bars, DJs & Nightlife Vendors Across the Gulf Coast</p>
+
+  <div style="margin:35px auto; max-width:600px; background:#111; border-radius:14px; padding:25px; box-shadow:0 0 30px #ff00ff;">
+    <p style="font-size:16px;">Hey {FirstName},</p>
+    <p style="color:#eee; line-height:1.6;">
+      Get your venue <strong>{Company}</strong> seen by more nightlife lovers!  
+      <br>WTPA is the new mobile app connecting people to nightlife events and vendors in 
+      <span style="color:#ff66cc;">Mississippi, New Orleans, and Texas</span>.
+    </p>
+
+    <!-- Neon Gradient Button -->
+    <a href="https://wtpamobileapp-collab.github.io/WTPA-VendorList/"
+       style="display:inline-block;
+              font-weight:bold;
+              font-size:16px;
+              letter-spacing:1px;
+              color:#fff;
+              background:linear-gradient(90deg,#ff00ff,#00ffff);
+              padding:14px 36px;
+              border-radius:40px;
+              text-decoration:none;
+              margin-top:20px;
+              box-shadow:0 0 10px #ff00ff, 0 0 25px #00ffff, 0 0 40px #ff00ff;
+              transition:all 0.3s ease-in-out;">
+       JOIN THE WAITLIST NOW
+    </a>
+
+    <p style="font-size:14px; color:#999; margin-top:25px;">
+      Be part of the launch wave — secure your vendor spot before the app drops!
+    </p>
+  </div>
+
+  <!-- Vendor Gallery -->
+  <div style="margin-top:40px;">
+    <h2 style="color:#ff66cc; font-size:24px; text-shadow:0 0 8px #ff00ff;">Vendors Already Joining the Vibe</h2>
+    <table align="center" cellspacing="10">
+      <tr>
+        <td><img src="https://wtpamobileapp-collab.github.io/WTPA-VendorList/images/IMG_1512.jpeg" width="240" style="border-radius:10px; box-shadow:0 0 12px #ff00ff;"></td>
+        <td><img src="https://wtpamobileapp-collab.github.io/WTPA-VendorList/images/IMG_1527.jpeg" width="240" style="border-radius:10px; box-shadow:0 0 12px #00ffff;"></td>
+      </tr>
+      <tr>
+        <td><img src="https://wtpamobileapp-collab.github.io/WTPA-VendorList/images/IMG_1635.jpeg" width="240" style="border-radius:10px; box-shadow:0 0 12px #ff00ff;"></td>
+        <td><img src="https://wtpamobileapp-collab.github.io/WTPA-VendorList/images/IMG_1508.jpeg" width="240" style="border-radius:10px; box-shadow:0 0 12px #00ffff;"></td>
+      </tr>
+      <tr>
+        <td><img src="https://wtpamobileapp-collab.github.io/WTPA-VendorList/images/IMG_1515.jpeg" width="240" style="border-radius:10px; box-shadow:0 0 12px #ff00ff;"></td>
+        <td><img src="https://wtpamobileapp-collab.github.io/WTPA-VendorList/images/IMG_1637.jpeg" width="240" style="border-radius:10px; box-shadow:0 0 12px #00ffff;"></td>
+      </tr>
+    </table>
+  </div>
+
+  <p style="margin-top:30px; color:#666; font-size:12px;">{unsubscribe}</p>
+</div>
