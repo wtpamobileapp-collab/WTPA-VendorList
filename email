@@ -32,6 +32,21 @@
     </p>
   </div>
 
+  <!-- App Preview -->
+  <div style="margin-top:40px;">
+    <h2 style="color:#ff66cc; font-size:24px; text-shadow:0 0 8px #ff00ff;">App Preview</h2>
+    <table align="center" cellspacing="10">
+     
+      <tr>
+        <td><img src="https://wtpamobileapp-collab.github.io/WTPA-VendorList/images/IMG_1515.jpeg" width="240" style="border-radius:10px; box-shadow:0 0 12px #ff00ff;"></td>
+        <td><img src="https://wtpamobileapp-collab.github.io/WTPA-VendorList/images/IMG_1637.jpeg" width="240" style="border-radius:10px; box-shadow:0 0 12px #00ffff;"></td>
+      </tr>
+    </table>
+  </div>
+
+  <p style="margin-top:30px; color:#666; font-size:12px;">{unsubscribe}</p>
+</div>
+
   <!-- Vendor Gallery -->
   <div style="margin-top:40px;">
     <h2 style="color:#ff66cc; font-size:24px; text-shadow:0 0 8px #ff00ff;">Vendors Already Joining the Vibe</h2>
